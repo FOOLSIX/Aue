@@ -13,6 +13,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> UNBREAKABLE = key("unbreakable");
+
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         HolderGetter<Item> itemHolderGetter = context.lookup(Registries.ITEM);
         register(

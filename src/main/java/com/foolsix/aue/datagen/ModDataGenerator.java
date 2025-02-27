@@ -20,6 +20,7 @@ public class ModDataGenerator {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(),new ModDatapackBuiltinEntriesProvider(packOutput, lookupProvider));
+        generator.addProvider(true ,new ModDatapackBuiltinEntriesProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new AUEEnchantmentTagProvider(packOutput, lookupProvider, existingFileHelper));
     }
 }
