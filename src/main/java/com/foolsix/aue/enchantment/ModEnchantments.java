@@ -6,10 +6,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.neoforged.neoforge.common.Tags;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> UNBREAKABLE = key("unbreakable");
@@ -21,7 +21,7 @@ public class ModEnchantments {
                 UNBREAKABLE,
                 Enchantment.enchantment(
                         Enchantment.definition(
-                                itemHolderGetter.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
+                                itemHolderGetter.getOrThrow(Tags.Items.ENCHANTABLES),
                                 1,
                                 1,
                                 Enchantment.constantCost(30),
