@@ -10,11 +10,11 @@ import static com.foolsix.aue.AueConfig.CONFIG;
 public class Unbreakable extends Enchantment {
 
     public Unbreakable() {
-        super(Rarity.VERY_RARE, EnchantmentCategory.create("ALL", a -> true), new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND, EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
+        super(Rarity.VERY_RARE, EnchantmentCategory.BREAKABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND, EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
     }
 
     @Override
-    public int getMinLevel() {
+    public int getMinCost(int level) {
         return CONFIG.MIN_COST.get();
     }
 
