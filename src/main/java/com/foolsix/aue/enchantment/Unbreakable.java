@@ -19,6 +19,11 @@ public class Unbreakable extends Enchantment {
     }
 
     @Override
+    public int getMaxCost(int level) {
+        return CONFIG.MAX_COST.get();
+    }
+
+    @Override
     public boolean isTradeable() {
         return CONFIG.IS_TRADABLE.get();
     }

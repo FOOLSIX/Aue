@@ -18,6 +18,7 @@ public class AueConfig {
     public final ForgeConfigSpec.BooleanValue IS_ALLOWED_ON_BOOKS;
     public final ForgeConfigSpec.BooleanValue IS_DISCOVERABLE;
     public final ForgeConfigSpec.IntValue MIN_COST;
+    public final ForgeConfigSpec.IntValue MAX_COST;
 
     public AueConfig(final ForgeConfigSpec.Builder BUILDER) {
         BUILDER.push("Another Unbreakable Enchantment");
@@ -26,6 +27,7 @@ public class AueConfig {
         IS_ALLOWED_ON_BOOKS = BUILDER.define("IS_ALLOWED_ON_BOOKS", true);
         IS_DISCOVERABLE = BUILDER.define("IS_DISCOVERABLE", true);
         MIN_COST = BUILDER.defineInRange("MIN_COST", 30, 0, Integer.MAX_VALUE);
+        MAX_COST = BUILDER.defineInRange("MAX_COST", 100, 0, Integer.MAX_VALUE);
         BUILDER.pop();
     }
 }
